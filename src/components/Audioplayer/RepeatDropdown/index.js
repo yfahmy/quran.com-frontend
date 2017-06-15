@@ -265,12 +265,13 @@ class RepeatButton extends Component {
     );
 
     return (
-      <div className="text-center">
+      <div className="text-center" style={{position:'relative'}}>
         <OverlayTrigger
           overlay={popover}
           placement="top"
           trigger="click"
           rootClose
+          container={this}
         >
           <i
             className={`pointer ss-icon ss-repeat ${style.buttons} ${repeat.from && style.repeat}`}
